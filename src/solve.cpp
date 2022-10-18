@@ -1,5 +1,4 @@
 #include "solve.hpp"
-#include "constants.hpp"
 
 /* Finds an entry in grid
 that is still unassigned */

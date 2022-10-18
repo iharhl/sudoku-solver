@@ -3,6 +3,7 @@
 
 #include "types.hpp"
 #include "check.hpp"
+#include "constants.hpp"
 
 bool solve(Vector2& grid);
 
