@@ -1,10 +1,9 @@
 #include <iostream>
 #include <iomanip>
 #include "types.hpp"
+#include "constants.hpp"
 #include "generate.hpp"
-
-#define NONE 0
-#define SIZE 9
+#include "solve.hpp"
 
 void printOut(Vector2& grid){
     for (int x{0}; x < SIZE; x++){
@@ -23,7 +22,10 @@ int main(){
     // Partially fill the grid
     generateGrid(grid);
 
-    //Print out the grid
+    // Solve the sudoku
+    solve(grid);
+
+    // Print out the grid
     printOut(grid);
 
     return 0;
