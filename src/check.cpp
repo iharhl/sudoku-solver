@@ -2,7 +2,7 @@
 
 /* Returns a boolean which indicates whether it will 
 be legal to assign num to the given location. */
-int isValid(int row, int col, int num, Vector2& grid){
+int isValid(int row, int col, int num, const Vector2& grid){
 
     int rowValid = isValidRow(row, num, grid);
     int colValid = isValidCol(col, num, grid);
@@ -12,7 +12,7 @@ int isValid(int row, int col, int num, Vector2& grid){
 }
 
 // Checks for duplicate in the row
-int isValidRow(int row, int num, Vector2& grid){
+int isValidRow(int row, int num, const Vector2& grid){
     for (int x{0}; x < SIZE; x++){
         if(grid[row][x] == num){
             return false;
@@ -22,7 +22,7 @@ int isValidRow(int row, int num, Vector2& grid){
 };
 
 // Checks for duplicate in the column
-int isValidCol(int col, int num, Vector2& grid){
+int isValidCol(int col, int num, const Vector2& grid){
     for (int x{0}; x < SIZE; x++){
         if(grid[x][col] == num){
             return false;
@@ -32,7 +32,7 @@ int isValidCol(int col, int num, Vector2& grid){
 };
 
 // Checks for duplicate in the box
-int isValidBox(int row, int col, int num, Vector2& grid){
+int isValidBox(int row, int col, int num, const Vector2& grid){
 
     // Start (row,col) for 3x3 box
     int startRow = row - row % 3;

@@ -2,7 +2,7 @@
 
 /* Finds an entry in grid
 that is still unassigned */
-bool notAssigned(Vector2& grid, int& row, int& col){
+bool notAssigned(const Vector2& grid, int& row, int& col){
     for (row = 0; row < SIZE; row++){
         for (col = 0; col < SIZE; col++){
             if (grid[row][col] == NONE){

@@ -5,7 +5,7 @@
 #include "generate.hpp"
 #include "solve.hpp"
 
-void printOut(Vector2& grid){
+void printOut(const Vector2& grid){
     for (int x{0}; x < SIZE; x++){
         for (int y{0}; y < SIZE; y++){
             std::cout << " " << std::setw(2) << grid[x][y] << " ";
